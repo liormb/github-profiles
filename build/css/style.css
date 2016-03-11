@@ -1,0 +1,39 @@
+
+.navbar-wrapper {
+    font-weight: 400;
+    background: #101010;
+}
+
+.navbar-brand {
+    color: rgb(200,200,200) !important;
+}
+
+.search-wrapper {
+    margin-bottom: 20px;
+}
+
+.profile-body {
+    padding: 20px;
+}
+
+.profile-avatar {
+    width: 100%;
+}
+
+.panel-title {
+    font-weight: 400;
+}
+
+.label {
+    margin-right: 10px;
+}
+
+strong {
+    margin-right: 0.6em;
+}
+
+.profile-repos-header {
+    padding: 20px 0 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
