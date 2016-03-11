@@ -8,19 +8,14 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-let Tokens;
+import Tokens from './models/Tokens';
 
-try {
-    Tokens = require('./models/Tokens');
-}
-catch(e) {
-    console.warn(`In order not to hit the GitHub limit rate, replace clientId and clientSecret in src/index.js with your credentials.\n\rSee: https://github.com/settings/developers`);
-    Tokens = {
-        clientId: '',
-        clientSecret: ''
-    };
-}
+// components
+import App from './components/App';
+
+// styles
+require('../public/scss/bootstrap.css');
+require('../public/scss/main.scss');
 
 const clientId = Tokens.TOKEN_CLIENT_ID;
 const clientSecret = Tokens.TOKEN_CLIENT_SECRET;
