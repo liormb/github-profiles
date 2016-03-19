@@ -4,22 +4,18 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var GRAPHQL_PORT = 8080;
 
 module.exports = {
     context: path.resolve('src'),
-    entry: [
-        './app'
-    ],
+    entry: path.resolve(__dirname, 'src', 'app'),
     output: {
-        path: path.resolve(__dirname, 'public/'),
-        publicPath: '/public/assets/',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'build/'),
+        publicPath: '/public/assets/'
     },
-    devServer: {
-        contentBase: 'public'
-    },
+    devServer: {},
     devtool: 'inline-source-map',
-    debug: true,
     module: {
         loaders: [
             { test: /\.(gif|png|jpe?g|svg|woff|woff2|eot|ttf)$/i, exclude: /node_modules/, loader: 'url?limit=10000' },
